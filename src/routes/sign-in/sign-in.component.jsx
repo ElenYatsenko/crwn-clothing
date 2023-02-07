@@ -2,6 +2,7 @@ import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
 } from "../../utils/farebase/feribase.utils.js";
+import SingUpForm from "../../components/sing-up-form/sing-up-form.component";
 
 const SignIn = () => {
   const logGoogleUser = async () => {
@@ -13,6 +14,7 @@ const SignIn = () => {
     <div>
       <h1>Sign in Page</h1>
       <button onClick={logGoogleUser}>Sing in with Google Popup</button>
+      <SingUpForm />
     </div>
   );
 };
