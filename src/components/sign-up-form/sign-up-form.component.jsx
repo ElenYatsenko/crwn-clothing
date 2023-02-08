@@ -1,12 +1,14 @@
 import { useState } from "react";
+
 import FormInput from "../form-input/form-input.component";
+import Button from "../button/button.conponents";
+
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth,
 } from "../../utils/farebase/feribase.utils";
 
 import "./sign-up-form.styles.scss";
-import Button from "../button/button.conponents";
 
 const defaultFormFields = {
   displayName: "",

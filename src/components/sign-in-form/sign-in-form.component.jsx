@@ -1,5 +1,8 @@
 import { useState } from "react";
+
 import FormInput from "../form-input/form-input.component";
+import Button from "../button/button.conponents";
+
 import {
   signInWithGooglePopup,
   createUserDocumentFromAuth,
@@ -7,7 +10,6 @@ import {
 } from "../../utils/farebase/feribase.utils";
 
 import "./sign-in-form.styles.scss";
-import Button from "../button/button.conponents";
 
 const defaultFormFields = {
   email: "",
@@ -23,19 +25,17 @@ const SingInForm = () => {
   };
 
   const singInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-
       resetFormFields();
     } catch (error) {
       switch (error.code) {
