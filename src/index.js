@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import { UserProvider } from "./contexs/user.context";
 import { ProductsProvider } from "./contexs/products.context";
-import { CartProvider } from "./contexs/cart.contex";
+import { CartProvider } from "./contexs/cart.context";
 
 import "./index.scss";
 

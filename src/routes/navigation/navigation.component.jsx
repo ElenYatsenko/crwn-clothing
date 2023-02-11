@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 
 import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import { UserContext } from "../../contexs/user.context";
-import { CartContex } from "../../contexs/cart.contex";
+import { CartContext } from "../../contexs/cart.context";
 
 import { signOutUser } from "../../utils/farebase/feribase.utils";
 
@@ -14,7 +14,7 @@ import "./navigation.styles.scss";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartContex);
+  const { isCartOpen } = useContext(CartContext);
 
   return (
     <Fragment>
