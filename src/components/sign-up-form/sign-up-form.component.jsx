@@ -8,7 +8,7 @@ import {
   createUserDocumentFromAuth,
 } from "../../utils/farebase/feribase.utils";
 
-import "./sign-up-form.styles.scss";
+import { SignUpContainer } from "./sign-up-form.styles";
 
 const defaultFormFields = {
   displayName: "",
@@ -53,7 +53,7 @@ const SingUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpContainer>
       <h2>Don't have an account?</h2>
       <span>Sing up email and password</span>
       <form onSubmit={handleSubmit}>
@@ -92,7 +92,7 @@ const SingUpForm = () => {
         />
         <Button type="submit">Sign up</Button>
       </form>
-    </div>
+    </SignUpContainer>
   );
 };
 
